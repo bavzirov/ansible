@@ -1,0 +1,8 @@
+---
+ - hosts: lab-servers
+   tasks:
+   - name: List  installed packages
+     raw: rpm -qa 
+     register: rpm
+   - debug: var=rpm.stdout_lines
+

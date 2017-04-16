@@ -1,0 +1,9 @@
+---
+- hosts: lab-servers
+  tasks: 
+    - name: Change parameter in file   
+      lineinfile: dest=/tmp/ssh2_config
+                  regexp="^#VerboseMode"
+                  line="VerboseMode=Yes"
+                  state=present
+

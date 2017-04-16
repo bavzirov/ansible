@@ -1,0 +1,7 @@
+---
+ - hosts: lab-servers
+   tasks:
+   - name: List files in /tmp and redirect to a file
+     shell: /bin/ls -l /tmp > /tmp/list
+     sudo: yes
+

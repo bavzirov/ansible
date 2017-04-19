@@ -1,0 +1,14 @@
+---
+-  hosts: all
+   tasks:
+     - name: Install httpd package
+       yum: name=httpd state=latest
+       sudo: yes  
+ 
+     - name: Starting httpd service
+       service: name=httpd state=started
+   
+     -name: Show how debug works
+      debug: msg={{ ansible_distribution }}
+      
+    

@@ -1,0 +1,2 @@
+ansible all -i /etc/ansible/hosts -m ping
+ansible -m setup -a 'filter=ansible_eth0' all -i /etc/ansible/hosts > /tmp/test1 

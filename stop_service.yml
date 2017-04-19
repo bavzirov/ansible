@@ -1,0 +1,5 @@
+---
+ - hosts: lab-servers
+   tasks:
+   - name: Start service  
+     service: name=syslog state=restarted

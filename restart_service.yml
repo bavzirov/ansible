@@ -1,0 +1,6 @@
+---
+ - hosts: lab-servers
+   tasks:
+   - name: Restart NIS service  
+     service: name=ypbind state=started
+
